@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .task{
+        width: 6.5em;
+        height: 2.3em;
+        margin: 1em;
+        color: white;
+        border: none;
+        border-radius: 0.625em;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        right: 20px;
+        z-index: 1;
+        overflow: hidden;
+}
+
+.task:hover {
+ color: black;
+}
+
+.task:after {
+ content: "";
+ background: white;
+ position: absolute;
+ z-index: -1;
+ left: -20%;
+ right: -20%;
+ top: 0;
+ bottom: 0;
+ transform: skewX(-45deg) scale(0, 1);
+ transition: all 0.5s;
+}
+
+.task:hover:after {
+ transform: skewX(-45deg) scale(1, 1);
+ -webkit-transition: all 0.5s;
+ transition: all 0.5s;
+}
+  </style>
+</head>
+<body>
+  <div class="home-container">
+    <div class="top-bar">
+      <div class="left-bar" id="welcomeText">Welcome</div>
+      <div class="right-bar">
+        <button id="logoutBtn" class="task">Logout</button>
+      </div>
+    </div>
+
+    <form id="taskForm" class="todo-form">
+      <input type="text" id="taskInput" placeholder="Enter task..." required />
+      <input type="file" id="fileInput" placeholder="Attach File" accept="image/*" />
+      <button type="submit" class="task">Add Task</button>
+    </form>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="home.js"></script>
+</body>
+</html>
