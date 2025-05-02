@@ -10,7 +10,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   const user = users.find((u) => u.email === email && u.password === password);
 
   if (!user) {
-    alert("Invalid credentials!");
+    alert("Invalid Credentials Register First");
     return;
   }
 

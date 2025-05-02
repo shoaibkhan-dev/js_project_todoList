@@ -13,7 +13,7 @@ body {
 
 .form-container,
 .home-container {
-  background: #1c1c1c;
+  background: #272626;
   padding: 30px;
   border-radius: 12px;
   width: 90%;
@@ -34,7 +34,7 @@ input[type="password"] {
   margin: 10px 0;
   background: #222;
   color: white;
-  border: 2px solid red;
+  border: 1px solid red;
   border-radius: 6px;
   position: relative;
   right: 12px;
